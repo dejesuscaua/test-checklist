@@ -210,8 +210,7 @@ module.exports = async function (context, req) {
 
             }
  
-            context.res = { status: 200, body: fileResult };
-
+            context.res = { status: 200, body: { success: true, message: "Upload concluido"} };
             resolve();
 
           } catch (error) {
