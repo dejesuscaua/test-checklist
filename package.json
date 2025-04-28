@@ -1,11 +1,22 @@
 {
-  "name": "azure-function",
+  "name": "azure-functions",
   "version": "1.0.0",
-  "description": "Function for Monday API",
-  "main": "index.js",
+  "description": "Azure Function for processing requests",
+  "main": "index.js", 
+  "scripts": {
+    "start": "func start", 
+    "deploy": "func azure functionapp publish <function_app_name>"
+  },
   "dependencies": {
     "dotenv": "^10.0.0",
+    "node-fetch": "^2.6.1", 
     "formidable": "^2.0.1",
-    "node-fetch": "^3.0.0"
+    "fs": "0.0.1-security" 
+  },
+  "devDependencies": {
+    "azure-functions-core-tools": "^3.0.0"
+  },
+  "engines": {
+    "node": "14.x"
   }
 }
