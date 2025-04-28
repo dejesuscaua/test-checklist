@@ -199,16 +199,14 @@ module.exports = async function (context, req) {
             const fileResult = await fileResponse.json();
  
             if (fileResult.errors) {
-
-              console.error("Erro ao fazer upload para Monday:", fileResult.errors);
-
-              context.res = { status: 500, body: { error: "Erro no upload", detalhe: fileResult.errors } };
-
-              reject();
-
-              return;
-
+            context.res = { status: 500, body: { error: "Erro no upload", detalhe: fileResult.errors } };
+            reject();
+            return;
             }
+            
+            // SEMPRE responder algo fixo e simples no sucesso
+            context.res = { status: 200, body: { success: true, message: "Upload concluído!" } };
+            resolve();
  
             context.res = { status: 200, body: { success: true, message: "Upload concluido"} };
             resolve();
