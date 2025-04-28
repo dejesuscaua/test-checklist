@@ -205,7 +205,10 @@ module.exports = async function (context, req) {
             }
             
             // SEMPRE responder algo fixo e simples no sucesso
-            context.res = { status: 200, body: { success: true, message: "Upload concluído!" } };
+            context.res = { 
+                status: 200,
+                headers: { "Content-Type": "application/json" }, 
+                body: { success: true, message: "Upload concluído!" } };
             resolve();
 
           } catch (error) {
