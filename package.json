@@ -1,18 +1,37 @@
 {
-  "name": "uploadformfunction",
+
+  "name": "ChecklistFunctions",
+
   "version": "1.0.0",
-  "description": "Azure Function para enviar formulários e upload de PDFs para Monday.com",
+
+  "description": "Azure Functions para enviar formulário e upload de PDF",
+
   "main": "index.js",
+
   "scripts": {
+
     "start": "func start"
+
   },
+
   "dependencies": {
+
     "dotenv": "^10.0.0",
+
     "form-data": "^4.0.0",
+
     "formidable": "^2.0.1",
+
     "node-fetch": "^3.3.1"
+
   },
+
   "engines": {
+
     "node": ">=16.0.0"
+
   }
+
 }
+
+ 
